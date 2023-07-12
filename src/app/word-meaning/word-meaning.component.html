@@ -1,0 +1,24 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Word Meaning App</h1>
+
+    <div class="field">
+      <label class="label">Enter a word:</label>
+      <div class="control">
+        <input class="input" type="text" [(ngModel)]="word" placeholder="e.g. elephant">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <button class="button is-primary" (click)="fetchMeaning()">Find Meaning</button>
+      </div>
+    </div>
+
+    <div class="content" *ngIf="meaning">
+      <h2 class="subtitle">Meaning:</h2>
+      <p class="meaning">{{ meaning }}</p>
+    </div>
+  </div>
+</section>
+
